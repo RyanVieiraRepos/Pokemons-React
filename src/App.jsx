@@ -70,47 +70,64 @@ const item9 = {
   
 const pokemons = [item1, item2, item3, item4, item5, item6, item7, item8, item9]
 
-
- 
-    function lista1(){
-
-      
-      pokemons.slice(0,2).map((umPokemon){
-        return(
-          <>
-          <div className='container'>
-             <Card info={umPokemon}/>
-          </div>
-          </>
-        )
-      })
-    
-}
+return(<>
+  <div className='container'>{
+ pokemons.slice(0, 3).map((pokemon, index)=>(
+ <Card key={index} info={pokemon}/>
+ ))     
+}</div>
   
-     
-      pokemons.map.slice(3,5)(function(umPokemon){
-        return(
-          <>
-          <div className='container'>
-             <Card info={umPokemon}/>
-          </div>
-          </>
-        )
-      })
+  <div className='container'>{
+ pokemons.slice(4, 7).map((pokemon, index)=>(
+ <Card key={index} info={pokemon}/>
+ ))     
+}</div>
 
+<div className='container'>{
+ pokemons.slice(6, 10).map((pokemon, index)=>(
+ <Card key={index} info={pokemon}/>
+ ))     
+}</div>
+
+
+</>
+)
+
+
+//informações declaradas acima
+
+
+//rederização dessas informações e lógica abaixo
+
+
+  // return(// as chaves entre as divs anunciam o uso do javascript dentro do html
+            //o return anuncia um bloco de código html e js juntos(jsx)
+
+                                                           // função anônima (parâmetro1, parâmetro2) => {}
+    //<div className='container'>{pokemons.slice(0,2).map((key, index) => {
+     // return (
+     // <Card key= {index} info={umPokemon}/>
+  // )
+                                                                                  //por mais que .map já saiba qual indice está, só poderei usa-lo 
+                                                                                  //caso dê o valor como parâmetro da função com o key contendo o index(indice atual) <Card key={index}/>
+      
+                                                                                  //aqui eu retorno o componente, que pode também ser adicionado mais lógica junto a ele
+     
+         
+                                                                   //info é o nome de uma prop(propriedade) //para cada iteração, foi criada uma variável(umPokemon) para receber suas informações que serão exibidas
+                                                                   //o info me permite preecher propridades de outro componente    //informações (interno,json,banco de dados ou api)
+                                                                                                  //<Card/> foram declaradas propriedades nos seus elementos, permitindo serem completas em outro componente
+                                                                                                  //<App.jsx/> o seu código busca as informações, as organiza da forma mais conveniente, e as renderiza, 
+                                                                                                  //preenchendo o componente <Card/>
+                                                                                                  //o info me permite preencher informações de um componente que deseja que seus elementos html por exemplo sejam preenchidos
+                                                                                                  //foi criada uma variavel para receber as informãções de cada pokemon para preencher um card, isso em cada iteração
       
     
-  
-     
-      pokemons.map.slice(6,8)(function(umPokemon){
-        return(
-          <>
-          <div className='container'>
-             <Card info={umPokemon}/>
-          </div>
-          </>
-        )
-      })
+   // })}</div>
+    //selecionado os três primeiros índices da array
+          //para cada índice um função(bloco de código) é chamada,
+  // )
+     //retornar no index, o componente card, preenchido pelas informações presentes num objeto dentro do componente app.jsx
 
       
     

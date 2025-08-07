@@ -7,9 +7,9 @@ return(
 <>
 <div className='card'>
         <img src={props.info.foto}/>
-        <h1>{props.info.num}</h1>
-        <h1>{props.info.name}</h1>
-        <h1>{props.info.type}</h1>
+        <strong>{props.info.num}</strong>
+        <strong>{props.info.name}</strong>
+        <strong>{props.info.type}</strong>
     </div>
 </>
     )

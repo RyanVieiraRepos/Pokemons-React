@@ -3,5 +3,15 @@
 }
 
 body{
-    background-color: antiquewhite;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    background-color: rgb(37, 37, 37);
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}.container strong{
+    
 }
