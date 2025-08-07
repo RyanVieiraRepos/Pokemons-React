@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import Card from './Card.jsx'
 import './App.css'
-
+import Audio from'./Audio.jsx'
 
 function App() {
   
+
+
+
    const item1 = {
   foto: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
   num: '#001',
@@ -71,6 +74,23 @@ const item9 = {
 const pokemons = [item1, item2, item3, item4, item5, item6, item7, item8, item9]
 
 return(<>
+
+<Audio/>
+
+   <div className='logo'>
+      <img src='logo.png'>
+      </img>
+   </div>
+
+<div className='cont'>
+  <strong>Abertura da primeira temporada!</strong>
+   <iframe src='./video.mp4'/>
+</div>
+
+
+
+
+   
   <div className='container'>{
  pokemons.slice(0, 3).map((pokemon, index)=>(
  <Card key={index} info={pokemon}/>
@@ -78,13 +98,13 @@ return(<>
 }</div>
   
   <div className='container'>{
- pokemons.slice(4, 7).map((pokemon, index)=>(
+ pokemons.slice(3, 6).map((pokemon, index)=>(
  <Card key={index} info={pokemon}/>
  ))     
 }</div>
 
 <div className='container'>{
- pokemons.slice(6, 10).map((pokemon, index)=>(
+ pokemons.slice(6, 10).map((pokemon, index)=>( //o react pede que eu passe o index e uma variavel como parametro
  <Card key={index} info={pokemon}/>
  ))     
 }</div>
@@ -128,7 +148,7 @@ return(<>
           //para cada índice um função(bloco de código) é chamada,
   // )
      //retornar no index, o componente card, preenchido pelas informações presentes num objeto dentro do componente app.jsx
-
+    
       
     
   
