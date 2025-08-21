@@ -22,17 +22,7 @@ body{
  font-size: 0.9em;
  margin-bottom: 0.3vw;
 }
-.logo{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    padding-bottom: 7vw;
-}
 
-.logo img{
-    width: 20vw;
-    
-}
 
 
 .cont{

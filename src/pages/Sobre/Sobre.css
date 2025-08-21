@@ -1,0 +1,17 @@
+.sobreCont{
+
+justify-content: center;
+align-items: center;
+display: flex;
+
+}
+
+
+.sobreText{
+    width: 36vw;
+}.sobreText strong{
+    font-family:'Press Start 2P';   
+    color: white;
+font-size: 2rem;
+}
+
